@@ -1,0 +1,16 @@
+p {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+.padded {
+    padding : 20px
+}
+.to-do {
+    background-color: rgb(190, 18, 18);
+}
+.in-progress {
+    background-color: rgb(182, 182, 5);
+}
+.done {
+    background-color: rgb(2, 114, 2);
+}

@@ -1,6 +1,6 @@
 const fs = require('fs')
 const http = require('http')
-const todos = require('./todos.js')
+
 http.createServer((req, res) => {
   let filedata = ""
   let stylesdata = ""
@@ -13,7 +13,7 @@ http.createServer((req, res) => {
         stylesdata += chunk
       })
       homeStyles.on('end' , () => {
-        res.write(`<head><style>${stylesdata}</style></head>`)
+        res.write(`<head><link rel="stylesheet" href="./styles.css"></head>`)
         todosFile.resume()
       })
       todosFile.on('data' ,(chunk) => {
@@ -36,7 +36,7 @@ http.createServer((req, res) => {
       })
       astronomyImage.on('end', () => {
         const imgSrc = `data:image/jpeg;base64,${imgData}`
-        res.write(`<img src="${imgSrc}">`)
+        res.write(`<img src="./images/fossils.jpg">`)
         res.end()
       })
     }

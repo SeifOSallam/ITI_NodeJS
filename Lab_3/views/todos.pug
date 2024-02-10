@@ -1,0 +1,5 @@
+html 
+    link(rel='stylesheet', type='text/css', href='/css/styles.css')
+body 
+    each todo in todos 
+        p(class=todo.status class='padded')= todo.title
